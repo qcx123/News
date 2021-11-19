@@ -48,15 +48,10 @@ class TTTabBar: UITabBar {
         let buttonY: CGFloat = 0.0
         
         var index = 0
-        
         for button in subviews {
-            print("\(index)")
             print(button)
-            if !button.isKind(of: NSClassFromString("UITabBarButton")!) {
-                continue
-            }
+            if !button.isKind(of: NSClassFromString("UITabBarButton")!) {continue}
             let buttonX = buttonW * (index > 1 ? CGFloat(index + 1) : CGFloat(index))
-            print("\(index)   \(buttonX)")
             button.frame = CGRect(x: buttonX, y: buttonY, width: buttonW, height: buttonH)
             index += 1
         }

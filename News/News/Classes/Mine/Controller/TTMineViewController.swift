@@ -1,5 +1,5 @@
 //
-//  TTMainViewController.swift
+//  TTMineViewController.swift
 //  News
 //
 //  Created by xx on 2021/11/18.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TTMainViewController: TTBaseViewController {
+class TTMineViewController: TTBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

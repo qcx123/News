@@ -21,7 +21,7 @@ class TTTabBarController: UITabBarController {
         addChild(TTHomeViewController(), title: "首页", imageName: "btn_home_normal", selectImageName: "btn_home_selected")
         addChild(TTVideoViewController(), title: "视频", imageName: "btn_column_normal", selectImageName: "btn_column_selected")
         addChild(TTHuoshanViewController(), title: "小视频", imageName: "btn_live_normal", selectImageName: "btn_live_selected")
-        addChild(TTMainViewController(), title: "我的", imageName: "btn_user_normal", selectImageName: "btn_user_selected")
+        addChild(TTMineViewController(), title: "我的", imageName: "btn_user_normal", selectImageName: "btn_user_selected")
         
         // tabbar 是 readonly属性，不能直接修改，利用KVC来修改
         setValue(TTTabBar(), forKey: "tabBar")
