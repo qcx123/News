@@ -32,6 +32,10 @@
 		F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */; };
 		F5A2FF5D278EC00100820D5C /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5C278EBFFF00820D5C /* UITableView+Extention.swift */; };
 		F5A2FF5F278ECC1D00820D5C /* UICollectionView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5E278ECC1C00820D5C /* UICollectionView+Extention.swift */; };
+		F5A2FF62279155B500820D5C /* TTMyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF60279155B400820D5C /* TTMyConcernCell.swift */; };
+		F5A2FF63279155B500820D5C /* TTMyConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2FF61279155B400820D5C /* TTMyConcernCell.xib */; };
+		F5A2FF652799656E00820D5C /* TTNoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF642799656D00820D5C /* TTNoLoginHeaderView.swift */; };
+		F5A2FF672799658E00820D5C /* TTNoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2FF662799658E00820D5C /* TTNoLoginHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		F5A2FF5C278EBFFF00820D5C /* UITableView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		F5A2FF5E278ECC1C00820D5C /* UICollectionView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extention.swift"; sourceTree = "<group>"; };
+		F5A2FF60279155B400820D5C /* TTMyConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMyConcernCell.swift; sourceTree = "<group>"; };
+		F5A2FF61279155B400820D5C /* TTMyConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTMyConcernCell.xib; sourceTree = "<group>"; };
+		F5A2FF642799656D00820D5C /* TTNoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNoLoginHeaderView.swift; sourceTree = "<group>"; };
+		F5A2FF662799658E00820D5C /* TTNoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTNoLoginHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +342,10 @@
 				F505A5682758BEE90073DF49 /* TTMyOtherCell.xib */,
 				F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */,
 				F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */,
+				F5A2FF60279155B400820D5C /* TTMyConcernCell.swift */,
+				F5A2FF61279155B400820D5C /* TTMyConcernCell.xib */,
+				F5A2FF642799656D00820D5C /* TTNoLoginHeaderView.swift */,
+				F5A2FF662799658E00820D5C /* TTNoLoginHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,7 +415,7 @@
 				F57FCC0827463A0D00F7D2FE /* Sources */,
 				F57FCC0927463A0D00F7D2FE /* Frameworks */,
 				F57FCC0A27463A0D00F7D2FE /* Resources */,
-				EC383AF2FC5FAE675D06F337 /* [CP] Embed Pods Frameworks */,
+				A0F5D8E84AE1DF582C1BBFB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -499,8 +511,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A2FF672799658E00820D5C /* TTNoLoginHeaderView.xib in Resources */,
 				F5A2FF59278D616500820D5C /* TTFirstSectionCell.xib in Resources */,
 				F57FCC1C27463A1200F7D2FE /* LaunchScreen.storyboard in Resources */,
+				F5A2FF63279155B500820D5C /* TTMyConcernCell.xib in Resources */,
 				F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */,
 				F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */,
 			);
@@ -545,7 +559,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC383AF2FC5FAE675D06F337 /* [CP] Embed Pods Frameworks */ = {
+		A0F5D8E84AE1DF582C1BBFB3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -575,6 +589,7 @@
 				F5A2FF5D278EC00100820D5C /* UITableView+Extention.swift in Sources */,
 				F505A5692758BEE90073DF49 /* TTMyOtherCell.swift in Sources */,
 				F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */,
+				F5A2FF652799656E00820D5C /* TTNoLoginHeaderView.swift in Sources */,
 				F57FCCE32747984200F7D2FE /* AppDelegate.swift in Sources */,
 				F57FCCE52747984200F7D2FE /* TTMineViewController.swift in Sources */,
 				F57FCCE12747984200F7D2FE /* TTVideoViewController.swift in Sources */,
@@ -582,6 +597,7 @@
 				F57FCCE22747984200F7D2FE /* TTHuoshanViewController.swift in Sources */,
 				F57FCCF3274CD64400F7D2FE /* TTNetworkTool.swift in Sources */,
 				F57FCCE62747984200F7D2FE /* TTTabBarController.swift in Sources */,
+				F5A2FF62279155B500820D5C /* TTMyConcernCell.swift in Sources */,
 				F57FCCE72747984200F7D2FE /* TTNavigationController.swift in Sources */,
 				F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */,
 				F57FCCE82747984200F7D2FE /* TTBaseViewController.swift in Sources */,
@@ -759,7 +775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G954855NKD;
 				INFOPLIST_FILE = News/Classes/Others/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -782,7 +798,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G954855NKD;
 				INFOPLIST_FILE = News/Classes/Others/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

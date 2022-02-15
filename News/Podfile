@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '12.1'
 
 target 'News' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +7,19 @@ target 'News' do
 
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'HandyJSON'
-
+  pod 'HandyJSON', '~> 5.0.4-beta'
+  pod 'Kingfisher', '~> 7.1.2'
+  pod 'IBAnimatable'
+  pod 'SwiftTheme'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SQLite.swift'
+  pod 'SVProgressHUD'
+  pod 'MJRefresh'
+  pod 'SGPagingView'
+  pod 'BMPlayer'
+  pod 'FDFullscreenPopGesture'
+  pod 'NVActivityIndicatorView'
+  pod 'lottie-ios'
+  
 end

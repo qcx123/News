@@ -17,10 +17,32 @@ class TTFirstSectionCell: UITableViewCell, TTRegisterCellForMine {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var myConcerns = [MyConcern](){
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    var myCellModel: MyCellModel? {
+        didSet {
+            leftLabel.text = myCellModel?.text
+            rightLabel.text = myCellModel?.grey_text
+        }
+    }
+    
+    var myConcern: MyConcern? {
+        didSet {
+            
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        collectionView.collectionViewLayout = MyConcernFlowLayout()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.my_registerCell(cell: TTMyConcernCell.self)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,3 +52,33 @@ class TTFirstSectionCell: UITableViewCell, TTRegisterCellForMine {
     }
     
 }
+
+extension TTFirstSectionCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.my_dequeueReusableCell(indexPath: indexPath) as TTMyConcernCell
+        cell.myConcern = myConcerns[indexPath.item]
+        return cell
+    }
+    
+    
+}
+
+class MyConcernFlowLayout: UICollectionViewFlowLayout {
+    override func prepare() {
+        // 每个cell的大小
+        itemSize = CGSize(width: 58, height: 74)
+        // 横向间距
+        minimumLineSpacing = 0
+        // 纵向间距
+        minimumInteritemSpacing = 0
+        // cell上下左右的间距
+        sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        // 设置水平滚动
+        scrollDirection = .horizontal
+    }
+}
+

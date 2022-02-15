@@ -14,7 +14,7 @@ protocol TTNetworkToolProtocol {
     // 我的界面 cell 的数据
     static func loadMyCellData(complete: @escaping (_ sections: [[MyCellModel]])->())
     // 我的关注数据
-    static func loadMyContern()
+    static func loadMyContern(complete: @escaping (_ concerns: [MyConcern])->())
 }
 
 extension TTNetworkToolProtocol {
@@ -24,12 +24,10 @@ extension TTNetworkToolProtocol {
         let url = BASE_URL + "/user/tab/tabs/?"
         let params = ["device_id": device_id]
         
-        Alamofire.request(url, parameters: params).responseJSON { (response) in
-            guard response.result.isSuccess else {
-                // 网络错误的提示信息
-                return
-            }
-            if let value = response.result.value {
+        AF.request(url, parameters: params).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let value):
                 let json = JSON(value)
                 guard json["message"] == "success" else {
                     return
@@ -50,12 +48,43 @@ extension TTNetworkToolProtocol {
                         complete(sectionArray)
                     }
                 }
+                break
+            case .failure(let error):
+                // 网络错误的提示信息
+                print(error)
+                break
             }
         }
     }
     // 我的关注数据
-    static func loadMyContern() {
+    static func loadMyContern(complete: @escaping (_ concerns: [MyConcern])->()) {
+        let url = BASE_URL + "/concern/v2/follow/my_follow/?"
+        let params = ["device_id": device_id]
         
+        AF.request(url, parameters: params).responseJSON { (response) in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                print(json)
+                if let datas = json["data"].arrayObject {
+                    print(datas)
+                    var concerns = [MyConcern]()
+                    for data in datas {
+                        let myCellModel = MyConcern.deserialize(from: data as? NSDictionary)
+                        concerns.append(myCellModel!)
+                    }
+                    complete(concerns)
+                }
+                break
+            case .failure(let error):
+                // 网络错误的提示信息
+                print(error)
+                break
+            }
+        }
     }
 }
 

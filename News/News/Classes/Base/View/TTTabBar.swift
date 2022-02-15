@@ -25,8 +25,8 @@ class TTTabBar: UITabBar {
         publishButton.layer.masksToBounds = true
         publishButton.layer.cornerRadius = 25
         publishButton.backgroundColor = UIColor.cyan
-        publishButton.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
-        publishButton.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .selected)
+        publishButton.setImage(UIImage(named: "feed_publish_44x44_"), for: .normal)
+        publishButton.setImage(UIImage(named: "feed_publish_press_44x44_"), for: .selected)
         return publishButton
     }()
     

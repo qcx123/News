@@ -11,10 +11,17 @@ class TTMineViewController: TTBaseViewController {
 
     lazy var tabelView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .plain)
+//        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return tableView
     }()
     
+    fileprivate lazy var headerView: TTNoLoginHeaderView = {
+        let headerView = Bundle.main.loadNibNamed("\(TTNoLoginHeaderView.self)", owner: nil, options: nil)?.last as! TTNoLoginHeaderView
+        return headerView
+    }()
+    
     var sections = [[MyCellModel]]()
+    var concerns = [MyConcern]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +31,7 @@ class TTMineViewController: TTBaseViewController {
         tabelView.backgroundColor = UIColor.globalBackgroundColor()
         tabelView.my_registerCell(cell: TTMyOtherCell.self)
         tabelView.my_registerCell(cell: TTFirstSectionCell.self)
-//        tabelView.register(UINib(nibName: String(describing: TTMyOtherCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TTMyOtherCell.self))
-//        tabelView.register(UINib(nibName: String(describing: TTFirstSectionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TTFirstSectionCell.self))
+        
         TTNetworkTool.loadMyCellData { sections in
             let string = "{\"text\":\"我的关注\",\"grey_text\":\"\"}"
             let myConcern = MyCellModel.deserialize(from: string)
@@ -34,19 +40,32 @@ class TTMineViewController: TTBaseViewController {
             self.sections.append(myConcerns)
             self.sections += sections
             self.tabelView.reloadData()
+            TTNetworkTool.loadMyContern { concerns in
+                self.concerns = concerns
+                let indexSet = IndexSet(integer: 0)
+                self.tabelView.reloadSections(indexSet, with: .automatic)
+            }
         }
     }
     
-
+    
 }
 
 extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        section == 1 ? 1 : 10
+        if section == 0 {
+            return headerView.frame.height
+        }
+        return section == 1 ? 1 : 10
     }
     
+    
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            return headerView
+        }
         let headView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 10))
         headView.backgroundColor = UIColor(r: 247, g: 248, b: 249)
         return headView
@@ -66,8 +85,16 @@ extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.my_dequeueReusableCell(indexPath: indexPath) as TTFirstSectionCell
             let section = sections[indexPath.section]
             let myCellModel = section[indexPath.row]
-            cell.leftLabel.text = myCellModel.text
-            cell.rightLabel.text = myCellModel.grey_text
+            cell.myCellModel = myCellModel;
+            if concerns.count == 0 || concerns.count == 1 {
+                cell.collectionView.isHidden = true
+            }
+            if concerns.count == 1 {
+                cell.myConcern = concerns.first
+            }
+            if concerns.count > 1 {
+                cell.myConcerns = concerns
+            }
             return cell
         }
         let cell = tableView.my_dequeueReusableCell(indexPath: indexPath) as TTMyOtherCell
@@ -79,7 +106,10 @@ extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        30
+        if indexPath.section == 0 && indexPath.row == 0 {
+            return (concerns.count == 0 || concerns.count == 1) ? 40 : 114
+        }
+        return 40
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
