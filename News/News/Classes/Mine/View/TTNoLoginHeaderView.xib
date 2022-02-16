@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KM9-iy-BfP">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    <rect key="frame" x="0.0" y="-48" width="414" height="308"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-hT-Bs6">
@@ -34,7 +34,7 @@
                             <rect key="frame" x="138" y="0.0" width="138" height="70"/>
                             <inset key="titleEdgeInsets" minX="-25" minY="25" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="30" minY="-25" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="收藏" image="history_profile_24x24_">
+                            <state key="normal" title="历史" image="history_profile_24x24_">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
@@ -42,9 +42,12 @@
                             <rect key="frame" x="276" y="0.0" width="138" height="70"/>
                             <inset key="titleEdgeInsets" minX="-25" minY="25" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="30" minY="-25" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="收藏" image="dayicon_profile_night_24x24_">
+                            <state key="normal" title="夜间" image="nighticon_profile_24x24_">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="dayOrNightButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KYk-bR-2K6"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,6 +82,9 @@
                             <real key="value" value="14"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="moreLoginButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="4Ve-kG-fsh"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Ahy-Yf-lSM">
                     <rect key="frame" x="0.0" y="51" width="414" height="66"/>
@@ -121,7 +127,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KM9-iy-BfP" secondAttribute="bottom" id="1Lb-7s-5Ig"/>
                 <constraint firstItem="JnB-aK-UMz" firstAttribute="top" secondItem="Ahy-Yf-lSM" secondAttribute="bottom" constant="25" id="Kh5-Ge-A0a"/>
                 <constraint firstItem="Ahy-Yf-lSM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TUW-QP-OOb"/>
-                <constraint firstItem="KM9-iy-BfP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZPf-ln-Ryb"/>
+                <constraint firstItem="KM9-iy-BfP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-48" id="ZPf-ln-Ryb"/>
                 <constraint firstItem="KFj-hT-Bs6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dsF-t2-1W7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KM9-iy-BfP" secondAttribute="trailing" id="gOg-hk-Y08"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KFj-hT-Bs6" secondAttribute="trailing" id="hsR-uR-VWj"/>
@@ -132,15 +138,33 @@
                 <constraint firstItem="KFj-hT-Bs6" firstAttribute="top" secondItem="JnB-aK-UMz" secondAttribute="bottom" constant="20" id="mHD-Io-lt4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImageView" destination="KM9-iy-BfP" id="xi9-mu-CqR"/>
+                <outlet property="bottomView" destination="KFj-hT-Bs6" id="AZM-Vw-stl"/>
+                <outlet property="dayOrNightButton" destination="Kvu-j9-Zyc" id="UJR-tg-aga"/>
+                <outlet property="favoriteButton" destination="xec-yc-nAY" id="rXH-h0-FMN"/>
+                <outlet property="historyButton" destination="cKa-DK-Klx" id="GXq-KB-TeG"/>
+                <outlet property="mobileButton" destination="Esz-Qv-DuB" id="Mh6-6w-rR7"/>
+                <outlet property="moreLoginButton" destination="JnB-aK-UMz" id="x6w-Vs-ajR"/>
+                <outlet property="qqButton" destination="2dS-ce-Zrp" id="6eo-Wa-2Ov"/>
+                <outlet property="sinaButton" destination="dQw-wI-QKg" id="zF0-5k-NiZ"/>
+                <outlet property="stackView" destination="Ahy-Yf-lSM" id="ZTj-N7-XMr"/>
+                <outlet property="wechatButton" destination="Dv7-Lg-dL8" id="b6a-Gk-WBc"/>
+            </connections>
             <point key="canvasLocation" x="31.884057971014496" y="41.517857142857139"/>
         </view>
     </objects>
+    <designables>
+        <designable name="JnB-aK-UMz">
+            <size key="intrinsicContentSize" width="105" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="cellphoneicon_login_profile_66x66_" width="66" height="66"/>
         <image name="cellphoneicon_login_profile_night_66x66_" width="66" height="66"/>
-        <image name="dayicon_profile_night_24x24_" width="24" height="24"/>
         <image name="favoriteicon_profile_24x24_" width="24" height="24"/>
         <image name="history_profile_24x24_" width="24" height="24"/>
+        <image name="nighticon_profile_24x24_" width="24" height="24"/>
         <image name="qqicon_login_profile_66x66_" width="66" height="66"/>
         <image name="qqicon_login_profile_night_66x66_" width="66" height="66"/>
         <image name="sinaicon_login_profile_66x66_" width="66" height="66"/>

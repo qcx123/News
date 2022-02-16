@@ -19,4 +19,10 @@ let BASE_URL = "http://is.snssdk.com"
 let device_id = "6096495334"
 let IID = "5034850950"
 
+let isIphoneX: Bool = ScreenHeight == 812 ? true : false
 
+let newsTitleHeight: CGFloat = 40
+let kMyHeaderViewHeight: CGFloat = 280
+let kUserDetailHeaderBGImageViewHeight: CGFloat = 146
+
+let isNight = "isNight"

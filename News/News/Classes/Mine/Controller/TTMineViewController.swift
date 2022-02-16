@@ -23,6 +23,20 @@ class TTMineViewController: TTBaseViewController {
     var sections = [[MyCellModel]]()
     var concerns = [MyConcern]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tabelView)
@@ -67,7 +81,7 @@ extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
             return headerView
         }
         let headView = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 10))
-        headView.backgroundColor = UIColor(r: 247, g: 248, b: 249)
+        headView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return headView
     }
     
@@ -114,6 +128,19 @@ extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tabelView.deselectRow(at: indexPath, animated: true)// 去掉点击阴影
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        print("offsetY = \(offsetY)")
+        if offsetY < 0 {
+            let totalOffsetY = kMyHeaderViewHeight + abs(offsetY)
+            print("totalOffsetY = \(totalOffsetY)")
+            let f = totalOffsetY / kMyHeaderViewHeight
+            print("f = \(f)")
+            headerView.bgImageView.frame = CGRect(x: -ScreenWidth * (f - 1) * 0.5, y: offsetY, width: ScreenWidth * f, height: totalOffsetY)
+            print(headerView.bgImageView.frame)
+        }
     }
     
 }

@@ -92,6 +92,7 @@
                 <outlet property="leftLabel" destination="1Xc-BT-7bE" id="AuV-hu-2F3"/>
                 <outlet property="rightImgView" destination="f51-qZ-lCX" id="ERR-Bt-umE"/>
                 <outlet property="rightLabel" destination="a1j-rW-u94" id="ta8-rj-ZA4"/>
+                <outlet property="topView" destination="Gix-kl-m57" id="v0P-de-oyB"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="89.397321428571431"/>
         </tableViewCell>

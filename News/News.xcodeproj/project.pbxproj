@@ -10,6 +10,9 @@
 		83AFF1D07FFE5085A62FAFBC /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF45454DC6FD3495A637FFE0 /* Pods_News.framework */; };
 		F505A5692758BEE90073DF49 /* TTMyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505A5672758BEE90073DF49 /* TTMyOtherCell.swift */; };
 		F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F505A5682758BEE90073DF49 /* TTMyOtherCell.xib */; };
+		F578142F27BCDE82004D36FE /* TTMyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578142E27BCDE82004D36FE /* TTMyTheme.swift */; };
+		F578143327BCE2C0004D36FE /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = F578143127BCE2C0004D36FE /* default_theme.plist */; };
+		F578143427BCE2C0004D36FE /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = F578143227BCE2C0004D36FE /* night_theme.plist */; };
 		F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57FCC1827463A1200F7D2FE /* Assets.xcassets */; };
 		F57FCC1C27463A1200F7D2FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57FCC1A27463A1200F7D2FE /* LaunchScreen.storyboard */; };
 		F57FCC2727463A1200F7D2FE /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57FCC2627463A1200F7D2FE /* NewsTests.swift */; };
@@ -61,6 +64,9 @@
 		DF45454DC6FD3495A637FFE0 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F505A5672758BEE90073DF49 /* TTMyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMyOtherCell.swift; sourceTree = "<group>"; };
 		F505A5682758BEE90073DF49 /* TTMyOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTMyOtherCell.xib; sourceTree = "<group>"; };
+		F578142E27BCDE82004D36FE /* TTMyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMyTheme.swift; sourceTree = "<group>"; };
+		F578143127BCE2C0004D36FE /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		F578143227BCE2C0004D36FE /* night_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
 		F57FCC0C27463A0D00F7D2FE /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57FCC1827463A1200F7D2FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F57FCC1B27463A1200F7D2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,6 +142,15 @@
 				DF45454DC6FD3495A637FFE0 /* Pods_News.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F578143027BCE2C0004D36FE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F578143127BCE2C0004D36FE /* default_theme.plist */,
+				F578143227BCE2C0004D36FE /* night_theme.plist */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		F57FCC0327463A0D00F7D2FE = {
@@ -300,6 +315,7 @@
 		F57FCCD02747984200F7D2FE /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				F578143027BCE2C0004D36FE /* Theme */,
 				F57FCCD12747984200F7D2FE /* AppDelegate.swift */,
 				F57FCCED274B959600F7D2FE /* Const.swift */,
 				F57FCCD22747984200F7D2FE /* Info.plist */,
@@ -400,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				F57FCCF2274CD64400F7D2FE /* TTNetworkTool.swift */,
+				F578142E27BCDE82004D36FE /* TTMyTheme.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -517,6 +534,8 @@
 				F5A2FF63279155B500820D5C /* TTMyConcernCell.xib in Resources */,
 				F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */,
 				F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */,
+				F578143327BCE2C0004D36FE /* default_theme.plist in Resources */,
+				F578143427BCE2C0004D36FE /* night_theme.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +621,7 @@
 				F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */,
 				F57FCCE82747984200F7D2FE /* TTBaseViewController.swift in Sources */,
 				F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */,
+				F578142F27BCDE82004D36FE /* TTMyTheme.swift in Sources */,
 				F57FCCEE274B959700F7D2FE /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

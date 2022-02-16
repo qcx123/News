@@ -8,7 +8,8 @@
 import UIKit
 
 class TTFirstSectionCell: UITableViewCell, TTRegisterCellForMine {
-
+    @IBOutlet weak var topView: UIView!
+    
     @IBOutlet weak var leftLabel: UILabel!
     
     @IBOutlet weak var rightLabel: UILabel!
@@ -43,6 +44,15 @@ class TTFirstSectionCell: UITableViewCell, TTRegisterCellForMine {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.my_registerCell(cell: TTMyConcernCell.self)
+        
+        // 设置主题
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        leftLabel.theme_textColor = "colors.black"
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        rightImgView.theme_image = "images.cellRightArrow"
+//        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        topView.theme_backgroundColor = "colors.cellBackgroundColor"
+        collectionView.theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
