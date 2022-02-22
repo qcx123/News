@@ -75,6 +75,6 @@ class TTNoLoginHeaderView: UIView {
     }
     
     @IBAction func moreLoginButtonClicked(_ sender: AnimatableButton) {
-        moreLoginButtonClicked!()
+        moreLoginButtonClicked?()
     }
 }

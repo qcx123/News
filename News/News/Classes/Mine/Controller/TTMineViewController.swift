@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxRelay
 
 class TTMineViewController: TTBaseViewController {
 
+    fileprivate let disposeBag = DisposeBag()
+    
     lazy var tabelView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .plain)
 //        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -40,6 +45,7 @@ class TTMineViewController: TTBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tabelView)
+        tabelView.theme_backgroundColor = "colors.cellBackgroundColor"
         tabelView.delegate = self
         tabelView.dataSource = self
         tabelView.backgroundColor = UIColor.globalBackgroundColor()
@@ -60,6 +66,26 @@ class TTMineViewController: TTBaseViewController {
                 self.tabelView.reloadSections(indexSet, with: .automatic)
             }
         }
+        
+        if #available(iOS 13.0, *) {
+            headerView.moreLoginButton.rx.controlEvent(.touchUpInside)
+                .subscribe(onNext: { [weak self] in
+                    let storyboard = UIStoryboard(name: "TTMoreLoginViewController", bundle: nil)
+                    let moreLoginVC = storyboard.instantiateViewController(identifier: "TTMoreLoginViewController") as! TTMoreLoginViewController
+                    moreLoginVC.modalSize = (width: .full, height: .custom(size: Float(ScreenHeight - (TTConstFunc.isiPhoneXScreen() ? 44 : 20))))
+                    self?.present(moreLoginVC, animated: true, completion: nil)
+                }).disposed(by: disposeBag)
+        } else {
+            headerView.moreLoginButtonClicked = {
+                let moreLoginVC = TTMoreLoginViewController(nibName: "TTMoreLoginViewController", bundle: nil)
+                moreLoginVC.modalSize = (width: .full, height: .custom(size: Float(ScreenHeight - (TTConstFunc.isiPhoneXScreen() ? 44 : 20))))
+                self.present(moreLoginVC, animated: true, completion: nil)
+            }
+        }
+            
+            
+
+            
     }
     
     

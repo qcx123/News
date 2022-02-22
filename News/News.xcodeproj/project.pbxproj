@@ -13,6 +13,9 @@
 		F578142F27BCDE82004D36FE /* TTMyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578142E27BCDE82004D36FE /* TTMyTheme.swift */; };
 		F578143327BCE2C0004D36FE /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = F578143127BCE2C0004D36FE /* default_theme.plist */; };
 		F578143427BCE2C0004D36FE /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = F578143227BCE2C0004D36FE /* night_theme.plist */; };
+		F578143827C37737004D36FE /* TTMoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578143727C37737004D36FE /* TTMoreLoginViewController.swift */; };
+		F578143A27C37805004D36FE /* TTMoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F578143927C37805004D36FE /* TTMoreLoginViewController.storyboard */; };
+		F578143C27C4BFEE004D36FE /* TTConstFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F578143B27C4BFED004D36FE /* TTConstFunc.swift */; };
 		F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F57FCC1827463A1200F7D2FE /* Assets.xcassets */; };
 		F57FCC1C27463A1200F7D2FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57FCC1A27463A1200F7D2FE /* LaunchScreen.storyboard */; };
 		F57FCC2727463A1200F7D2FE /* NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57FCC2627463A1200F7D2FE /* NewsTests.swift */; };
@@ -67,6 +70,9 @@
 		F578142E27BCDE82004D36FE /* TTMyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMyTheme.swift; sourceTree = "<group>"; };
 		F578143127BCE2C0004D36FE /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		F578143227BCE2C0004D36FE /* night_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		F578143727C37737004D36FE /* TTMoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMoreLoginViewController.swift; sourceTree = "<group>"; };
+		F578143927C37805004D36FE /* TTMoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TTMoreLoginViewController.storyboard; sourceTree = "<group>"; };
+		F578143B27C4BFED004D36FE /* TTConstFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTConstFunc.swift; sourceTree = "<group>"; };
 		F57FCC0C27463A0D00F7D2FE /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57FCC1827463A1200F7D2FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F57FCC1B27463A1200F7D2FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -318,6 +324,7 @@
 				F578143027BCE2C0004D36FE /* Theme */,
 				F57FCCD12747984200F7D2FE /* AppDelegate.swift */,
 				F57FCCED274B959600F7D2FE /* Const.swift */,
+				F578143B27C4BFED004D36FE /* TTConstFunc.swift */,
 				F57FCCD22747984200F7D2FE /* Info.plist */,
 				F57FCCF1274CD60F00F7D2FE /* Extentions */,
 				F57FCCF4274CD64D00F7D2FE /* Tools */,
@@ -339,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				F57FCCD52747984200F7D2FE /* TTMineViewController.swift */,
+				F578143727C37737004D36FE /* TTMoreLoginViewController.swift */,
+				F578143927C37805004D36FE /* TTMoreLoginViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -532,6 +541,7 @@
 				F5A2FF59278D616500820D5C /* TTFirstSectionCell.xib in Resources */,
 				F57FCC1C27463A1200F7D2FE /* LaunchScreen.storyboard in Resources */,
 				F5A2FF63279155B500820D5C /* TTMyConcernCell.xib in Resources */,
+				F578143A27C37805004D36FE /* TTMoreLoginViewController.storyboard in Resources */,
 				F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */,
 				F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */,
 				F578143327BCE2C0004D36FE /* default_theme.plist in Resources */,
@@ -610,9 +620,11 @@
 				F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */,
 				F5A2FF652799656E00820D5C /* TTNoLoginHeaderView.swift in Sources */,
 				F57FCCE32747984200F7D2FE /* AppDelegate.swift in Sources */,
+				F578143C27C4BFEE004D36FE /* TTConstFunc.swift in Sources */,
 				F57FCCE52747984200F7D2FE /* TTMineViewController.swift in Sources */,
 				F57FCCE12747984200F7D2FE /* TTVideoViewController.swift in Sources */,
 				F57FCCE02747984200F7D2FE /* TTHomeViewController.swift in Sources */,
+				F578143827C37737004D36FE /* TTMoreLoginViewController.swift in Sources */,
 				F57FCCE22747984200F7D2FE /* TTHuoshanViewController.swift in Sources */,
 				F57FCCF3274CD64400F7D2FE /* TTNetworkTool.swift in Sources */,
 				F57FCCE62747984200F7D2FE /* TTTabBarController.swift in Sources */,
