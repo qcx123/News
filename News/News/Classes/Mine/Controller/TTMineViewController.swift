@@ -48,7 +48,6 @@ class TTMineViewController: TTBaseViewController {
         tabelView.theme_backgroundColor = "colors.cellBackgroundColor"
         tabelView.delegate = self
         tabelView.dataSource = self
-        tabelView.backgroundColor = UIColor.globalBackgroundColor()
         tabelView.my_registerCell(cell: TTMyOtherCell.self)
         tabelView.my_registerCell(cell: TTFirstSectionCell.self)
         

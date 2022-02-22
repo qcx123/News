@@ -51,13 +51,36 @@ class TTMoreLoginViewController: AnimatableModalViewController {
     
     @IBAction func loginModeButtonClicked(_ sender: UIButton) {
         loginModeButton.isSelected = !sender.isSelected
+        sendVerifyView.isHidden = sender.isSelected
+        findPasswordView.isHidden = !sender.isSelected
+        middleTipLabel.isHidden = sender.isSelected
+        passwordtextField.placeholder = sender.isSelected ? "密码" : "请输入验证码"
+        topLabel.text = sender.isSelected ? "账号密码登录" : "登录你的头条，精彩永不流失"
     }
     
+    @IBAction func readButtonClicked(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loginModeButton.setTitle("免密码登录", for: .selected)
+        findPasswordView.isHidden = true
+        self.view.theme_backgroundColor = "colors.cellBackgroundColor"
+        topLabel.theme_textColor = "colors.black"
+        middleTipLabel.theme_textColor = "colors.cellRightTextColor"
+        readLabel.theme_textColor = "colors.black"
+        enterTouTiaoButton.theme_backgroundColor = "colors.enterToutiaoBackgroundColor"
+        enterTouTiaoButton.theme_setTitleColor("colors.enterToutiaoTextColor", forState: .normal)
+        readButton.theme_setImage("images.loginReadButtonSelected", forState: .normal)
+        readButton.theme_setImage("images.loginReadButton", forState: .selected)
+        mobileView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        passwrodView.theme_backgroundColor = "colors.loginMobileViewBackgroundColor"
+        loginCloseButton.theme_setImage("images.loginCloseButtonImage", forState: .normal)
+        wechatLoginButton.theme_setImage("images.moreLoginWechatButton", forState: .normal)
+        qqLoginButton.theme_setImage("images.moreLoginQQButton", forState: .normal)
+        tianyiLoginButton.theme_setImage("images.moreLoginTianyiButton", forState: .normal)
+        mailLoginButton.theme_setImage("images.moreLoginMailButton", forState: .normal)
     }
     
     @IBAction func closeBtnClick(_ sender: UIButton) {

@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="24" id="7D0-aT-mRb"/>
                                     <constraint firstAttribute="height" constant="24" id="Ri3-ee-IGJ"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="close_sdk_login_14x14_"/>
+                                <state key="normal" image="close_sdk_login_14x14_"/>
                                 <connections>
                                     <action selector="closeBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vUz-Po-QFf"/>
                                 </connections>
@@ -187,6 +187,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-W8-Xxs">
                                 <rect key="frame" x="89" y="366.5" width="15" height="22"/>
                                 <state key="normal" image="details_choose_ok_icon_15x15_"/>
+                                <connections>
+                                    <action selector="readButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UCT-iY-UGd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDP-db-ImF">
                                 <rect key="frame" x="167" y="448.5" width="80" height="28"/>
