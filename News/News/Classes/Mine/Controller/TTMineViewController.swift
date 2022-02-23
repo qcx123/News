@@ -153,6 +153,13 @@ extension TTMineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tabelView.deselectRow(at: indexPath, animated: true)// 去掉点击阴影
+        if indexPath.section == 3 {
+            if indexPath.row == 1 {// 系统设置界面
+                let settingVC = TTSettingTableViewController()
+                settingVC.title = "设置"
+                navigationController?.pushViewController(settingVC, animated: true)
+            }
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

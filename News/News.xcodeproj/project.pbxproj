@@ -33,6 +33,13 @@
 		F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57FCCEF274B962900F7D2FE /* UIColor+Extention.swift */; };
 		F57FCCF3274CD64400F7D2FE /* TTNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57FCCF2274CD64400F7D2FE /* TTNetworkTool.swift */; };
 		F57FCCF6274CE24900F7D2FE /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57FCCF5274CE24900F7D2FE /* MyCellModel.swift */; };
+		F5A05A4227C4E2B700AE961B /* TTSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4127C4E2B700AE961B /* TTSettingTableViewController.swift */; };
+		F5A05A4627C6094400AE961B /* emoji_mapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4327C6094400AE961B /* emoji_mapping.plist */; };
+		F5A05A4727C6094400AE961B /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4427C6094400AE961B /* settingPlist.plist */; };
+		F5A05A4827C6094400AE961B /* emoji_sort.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4527C6094400AE961B /* emoji_sort.plist */; };
+		F5A05A4A27C6099A00AE961B /* TTSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4927C6099A00AE961B /* TTSettingModel.swift */; };
+		F5A05A4D27C60FE000AE961B /* TTSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */; };
+		F5A05A4E27C60FE000AE961B /* TTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */; };
 		F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */; };
 		F5A2FF59278D616500820D5C /* TTFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */; };
 		F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */; };
@@ -96,6 +103,13 @@
 		F57FCCEF274B962900F7D2FE /* UIColor+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		F57FCCF2274CD64400F7D2FE /* TTNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNetworkTool.swift; sourceTree = "<group>"; };
 		F57FCCF5274CE24900F7D2FE /* MyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
+		F5A05A4127C4E2B700AE961B /* TTSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingTableViewController.swift; sourceTree = "<group>"; };
+		F5A05A4327C6094400AE961B /* emoji_mapping.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = emoji_mapping.plist; sourceTree = "<group>"; };
+		F5A05A4427C6094400AE961B /* settingPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
+		F5A05A4527C6094400AE961B /* emoji_sort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = emoji_sort.plist; sourceTree = "<group>"; };
+		F5A05A4927C6099A00AE961B /* TTSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingModel.swift; sourceTree = "<group>"; };
+		F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingCell.swift; sourceTree = "<group>"; };
+		F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTSettingCell.xib; sourceTree = "<group>"; };
 		F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFirstSectionCell.swift; sourceTree = "<group>"; };
 		F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFirstSectionCell.xib; sourceTree = "<group>"; };
 		F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -325,6 +339,9 @@
 				F57FCCD12747984200F7D2FE /* AppDelegate.swift */,
 				F57FCCED274B959600F7D2FE /* Const.swift */,
 				F578143B27C4BFED004D36FE /* TTConstFunc.swift */,
+				F5A05A4327C6094400AE961B /* emoji_mapping.plist */,
+				F5A05A4527C6094400AE961B /* emoji_sort.plist */,
+				F5A05A4427C6094400AE961B /* settingPlist.plist */,
 				F57FCCD22747984200F7D2FE /* Info.plist */,
 				F57FCCF1274CD60F00F7D2FE /* Extentions */,
 				F57FCCF4274CD64D00F7D2FE /* Tools */,
@@ -348,6 +365,7 @@
 				F57FCCD52747984200F7D2FE /* TTMineViewController.swift */,
 				F578143727C37737004D36FE /* TTMoreLoginViewController.swift */,
 				F578143927C37805004D36FE /* TTMoreLoginViewController.storyboard */,
+				F5A05A4127C4E2B700AE961B /* TTSettingTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				F57FCCF5274CE24900F7D2FE /* MyCellModel.swift */,
+				F5A05A4927C6099A00AE961B /* TTSettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +390,8 @@
 				F5A2FF61279155B400820D5C /* TTMyConcernCell.xib */,
 				F5A2FF642799656D00820D5C /* TTNoLoginHeaderView.swift */,
 				F5A2FF662799658E00820D5C /* TTNoLoginHeaderView.xib */,
+				F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */,
+				F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,7 +563,11 @@
 				F57FCC1C27463A1200F7D2FE /* LaunchScreen.storyboard in Resources */,
 				F5A2FF63279155B500820D5C /* TTMyConcernCell.xib in Resources */,
 				F578143A27C37805004D36FE /* TTMoreLoginViewController.storyboard in Resources */,
+				F5A05A4827C6094400AE961B /* emoji_sort.plist in Resources */,
+				F5A05A4727C6094400AE961B /* settingPlist.plist in Resources */,
+				F5A05A4E27C60FE000AE961B /* TTSettingCell.xib in Resources */,
 				F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */,
+				F5A05A4627C6094400AE961B /* emoji_mapping.plist in Resources */,
 				F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */,
 				F578143327BCE2C0004D36FE /* default_theme.plist in Resources */,
 				F578143427BCE2C0004D36FE /* night_theme.plist in Resources */,
@@ -632,9 +657,12 @@
 				F57FCCE72747984200F7D2FE /* TTNavigationController.swift in Sources */,
 				F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */,
 				F57FCCE82747984200F7D2FE /* TTBaseViewController.swift in Sources */,
+				F5A05A4227C4E2B700AE961B /* TTSettingTableViewController.swift in Sources */,
 				F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */,
 				F578142F27BCDE82004D36FE /* TTMyTheme.swift in Sources */,
 				F57FCCEE274B959700F7D2FE /* Const.swift in Sources */,
+				F5A05A4D27C60FE000AE961B /* TTSettingCell.swift in Sources */,
+				F5A05A4A27C6099A00AE961B /* TTSettingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

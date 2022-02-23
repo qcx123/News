@@ -11,11 +11,23 @@ class TTNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.theme_barTintColor = "colors.cellBackgroundColor"
+        navigationBar.theme_tintColor = "colors.navigationBarTintColor"
     }
     
-
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "lefterbackicon_titlebar_24x24_"), style: .plain, target: self, action: #selector(backButtonClick))
+        }
+        super.pushViewController(viewController, animated: animated)
+    }
+    
+    @objc func backButtonClick() {
+        popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
