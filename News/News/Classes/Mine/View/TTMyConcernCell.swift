@@ -21,6 +21,7 @@ class TTMyConcernCell: UICollectionViewCell, TTRegisterCellForMine {
         didSet {
             avatarImgView.kf.setImage(with: URL(string: myConcern?.icon ?? ""))
             nameLabel.text = myConcern?.name
+            nameLabel.theme_textColor = "colors.black"
             if let is_verift = myConcern?.is_verift {
                 vipImgView.isHidden = !is_verift
             }

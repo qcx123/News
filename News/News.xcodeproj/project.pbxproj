@@ -40,6 +40,7 @@
 		F5A05A4A27C6099A00AE961B /* TTSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4927C6099A00AE961B /* TTSettingModel.swift */; };
 		F5A05A4D27C60FE000AE961B /* TTSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */; };
 		F5A05A4E27C60FE000AE961B /* TTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */; };
+		F5A05A5027C6445300AE961B /* SettingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4F27C6445300AE961B /* SettingTools.swift */; };
 		F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */; };
 		F5A2FF59278D616500820D5C /* TTFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */; };
 		F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */; };
@@ -110,6 +111,7 @@
 		F5A05A4927C6099A00AE961B /* TTSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingModel.swift; sourceTree = "<group>"; };
 		F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingCell.swift; sourceTree = "<group>"; };
 		F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTSettingCell.xib; sourceTree = "<group>"; };
+		F5A05A4F27C6445300AE961B /* SettingTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTools.swift; sourceTree = "<group>"; };
 		F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFirstSectionCell.swift; sourceTree = "<group>"; };
 		F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFirstSectionCell.xib; sourceTree = "<group>"; };
 		F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			children = (
 				F57FCCF2274CD64400F7D2FE /* TTNetworkTool.swift */,
 				F578142E27BCDE82004D36FE /* TTMyTheme.swift */,
+				F5A05A4F27C6445300AE961B /* SettingTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				F5A2FF62279155B500820D5C /* TTMyConcernCell.swift in Sources */,
 				F57FCCE72747984200F7D2FE /* TTNavigationController.swift in Sources */,
 				F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */,
+				F5A05A5027C6445300AE961B /* SettingTools.swift in Sources */,
 				F57FCCE82747984200F7D2FE /* TTBaseViewController.swift in Sources */,
 				F5A05A4227C4E2B700AE961B /* TTSettingTableViewController.swift in Sources */,
 				F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */,

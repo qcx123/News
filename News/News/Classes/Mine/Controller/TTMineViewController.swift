@@ -81,10 +81,7 @@ class TTMineViewController: TTBaseViewController {
                 self.present(moreLoginVC, animated: true, completion: nil)
             }
         }
-            
-            
-
-            
+          
     }
     
     
