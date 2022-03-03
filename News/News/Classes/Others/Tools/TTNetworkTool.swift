@@ -10,6 +10,10 @@ import Alamofire
 import SwiftyJSON
 
 protocol TTNetworkToolProtocol {
+    // --------------------------- 首页 ------------------------
+    // 首页顶部新闻辩题数据
+    static func loadHomeNewsTitleData(complete: @escaping (_ sections: [TTHomeNewsTitle])->())
+    
     // --------------------------- 我的 mine ------------------------
     // 我的界面 cell 的数据
     static func loadMyCellData(complete: @escaping (_ sections: [[MyCellModel]])->())
@@ -18,6 +22,46 @@ protocol TTNetworkToolProtocol {
 }
 
 extension TTNetworkToolProtocol {
+    // --------------------------- 首页 ------------------------
+    // 首页顶部新闻辩题数据
+    static func loadHomeNewsTitleData(complete: @escaping (_ newsTitles: [TTHomeNewsTitle])->()) {
+        let url = BASE_URL + "/article/category/get_subscribed/v1/?"
+        let params = ["device_id": device_id, "iid": iid]
+        
+        AF.request(url, parameters: params).responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let value):
+                print(value)
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                
+                if let dataDict = json["data"].dictionary {
+                    print(dataDict)
+                    if let data = dataDict["data"]?.arrayObject {
+                        var titles = [TTHomeNewsTitle]()
+                        let jsonString = "{\"category\": \"\", \"name\": \"推荐\"}"
+                        let recommend = TTHomeNewsTitle.deserialize(from: jsonString)
+                        titles.append(recommend!)
+                        for item in data {
+                            let newsTitle = TTHomeNewsTitle.deserialize(from: item as? NSDictionary)
+                            titles.append(newsTitle!)
+                        }
+                        complete(titles)
+                    }
+                }
+                break
+            case .failure(let error):
+                // 网络错误的提示信息
+                print(error)
+                break
+            }
+        }
+        
+    }
+    
     // --------------------------- 我的 mine ------------------------
     // 我的界面 cell 的数据
     static func loadMyCellData(complete: @escaping (_ sections: [[MyCellModel]])->()) {

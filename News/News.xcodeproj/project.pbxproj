@@ -41,6 +41,12 @@
 		F5A05A4D27C60FE000AE961B /* TTSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */; };
 		F5A05A4E27C60FE000AE961B /* TTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */; };
 		F5A05A5027C6445300AE961B /* SettingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A4F27C6445300AE961B /* SettingTools.swift */; };
+		F5A05A5227C78B1900AE961B /* TTOfflineDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A5127C78B1900AE961B /* TTOfflineDownloadViewController.swift */; };
+		F5A05A5527C8B08700AE961B /* TTOfflineDownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A5327C8B08700AE961B /* TTOfflineDownloadCell.swift */; };
+		F5A05A5627C8B08700AE961B /* TTOfflineDownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A05A5427C8B08700AE961B /* TTOfflineDownloadCell.xib */; };
+		F5A05A5827C8BE6D00AE961B /* TTHomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A5727C8BE6D00AE961B /* TTHomeNewsTitle.swift */; };
+		F5A05A5A27CF5FEF00AE961B /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05A5927CF5FEF00AE961B /* SQLiteManager.swift */; };
+		F5A05A5C27CF60E300AE961B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A05A5B27CF60E300AE961B /* libsqlite3.0.tbd */; };
 		F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */; };
 		F5A2FF59278D616500820D5C /* TTFirstSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */; };
 		F5A2FF5B278D773D00820D5C /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */; };
@@ -112,6 +118,12 @@
 		F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSettingCell.swift; sourceTree = "<group>"; };
 		F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTSettingCell.xib; sourceTree = "<group>"; };
 		F5A05A4F27C6445300AE961B /* SettingTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTools.swift; sourceTree = "<group>"; };
+		F5A05A5127C78B1900AE961B /* TTOfflineDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTOfflineDownloadViewController.swift; sourceTree = "<group>"; };
+		F5A05A5327C8B08700AE961B /* TTOfflineDownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTOfflineDownloadCell.swift; sourceTree = "<group>"; };
+		F5A05A5427C8B08700AE961B /* TTOfflineDownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTOfflineDownloadCell.xib; sourceTree = "<group>"; };
+		F5A05A5727C8BE6D00AE961B /* TTHomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHomeNewsTitle.swift; sourceTree = "<group>"; };
+		F5A05A5927CF5FEF00AE961B /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		F5A05A5B27CF60E300AE961B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F5A2FF56278D616300820D5C /* TTFirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTFirstSectionCell.swift; sourceTree = "<group>"; };
 		F5A2FF57278D616300820D5C /* TTFirstSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TTFirstSectionCell.xib; sourceTree = "<group>"; };
 		F5A2FF5A278D773D00820D5C /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
@@ -128,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A05A5C27CF60E300AE961B /* libsqlite3.0.tbd in Frameworks */,
 				83AFF1D07FFE5085A62FAFBC /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +174,7 @@
 		F49C675BF132C889783CC9FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5A05A5B27CF60E300AE961B /* libsqlite3.0.tbd */,
 				DF45454DC6FD3495A637FFE0 /* Pods_News.framework */,
 			);
 			name = Frameworks;
@@ -259,6 +273,7 @@
 		F57FCCC42747984200F7D2FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F5A05A5727C8BE6D00AE961B /* TTHomeNewsTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +383,7 @@
 				F578143727C37737004D36FE /* TTMoreLoginViewController.swift */,
 				F578143927C37805004D36FE /* TTMoreLoginViewController.storyboard */,
 				F5A05A4127C4E2B700AE961B /* TTSettingTableViewController.swift */,
+				F5A05A5127C78B1900AE961B /* TTOfflineDownloadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,6 +410,8 @@
 				F5A2FF662799658E00820D5C /* TTNoLoginHeaderView.xib */,
 				F5A05A4B27C60FE000AE961B /* TTSettingCell.swift */,
 				F5A05A4C27C60FE000AE961B /* TTSettingCell.xib */,
+				F5A05A5327C8B08700AE961B /* TTOfflineDownloadCell.swift */,
+				F5A05A5427C8B08700AE961B /* TTOfflineDownloadCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +468,7 @@
 				F57FCCF2274CD64400F7D2FE /* TTNetworkTool.swift */,
 				F578142E27BCDE82004D36FE /* TTMyTheme.swift */,
 				F5A05A4F27C6445300AE961B /* SettingTools.swift */,
+				F5A05A5927CF5FEF00AE961B /* SQLiteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -572,6 +591,7 @@
 				F57FCC1927463A1200F7D2FE /* Assets.xcassets in Resources */,
 				F5A05A4627C6094400AE961B /* emoji_mapping.plist in Resources */,
 				F505A56A2758BEE90073DF49 /* TTMyOtherCell.xib in Resources */,
+				F5A05A5627C8B08700AE961B /* TTOfflineDownloadCell.xib in Resources */,
 				F578143327BCE2C0004D36FE /* default_theme.plist in Resources */,
 				F578143427BCE2C0004D36FE /* night_theme.plist in Resources */,
 			);
@@ -641,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A2FF5F278ECC1D00820D5C /* UICollectionView+Extention.swift in Sources */,
+				F5A05A5A27CF5FEF00AE961B /* SQLiteManager.swift in Sources */,
 				F57FCCE92747984200F7D2FE /* TTTabBar.swift in Sources */,
 				F57FCCF6274CE24900F7D2FE /* MyCellModel.swift in Sources */,
 				F5A2FF5D278EC00100820D5C /* UITableView+Extention.swift in Sources */,
@@ -658,10 +679,13 @@
 				F57FCCE62747984200F7D2FE /* TTTabBarController.swift in Sources */,
 				F5A2FF62279155B500820D5C /* TTMyConcernCell.swift in Sources */,
 				F57FCCE72747984200F7D2FE /* TTNavigationController.swift in Sources */,
+				F5A05A5827C8BE6D00AE961B /* TTHomeNewsTitle.swift in Sources */,
 				F57FCCF0274B962900F7D2FE /* UIColor+Extention.swift in Sources */,
+				F5A05A5527C8B08700AE961B /* TTOfflineDownloadCell.swift in Sources */,
 				F5A05A5027C6445300AE961B /* SettingTools.swift in Sources */,
 				F57FCCE82747984200F7D2FE /* TTBaseViewController.swift in Sources */,
 				F5A05A4227C4E2B700AE961B /* TTSettingTableViewController.swift in Sources */,
+				F5A05A5227C78B1900AE961B /* TTOfflineDownloadViewController.swift in Sources */,
 				F5A2FF58278D616500820D5C /* TTFirstSectionCell.swift in Sources */,
 				F578142F27BCDE82004D36FE /* TTMyTheme.swift in Sources */,
 				F57FCCEE274B959700F7D2FE /* Const.swift in Sources */,

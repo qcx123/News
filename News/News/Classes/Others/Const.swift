@@ -17,7 +17,10 @@ let ScreenHeight = UIScreen.main.bounds.height
 let BASE_URL = "http://is.snssdk.com"
 
 let device_id = "6096495334"
-let IID = "5034850950"
+let iid = "5034850950"
+
+//let device_id = "8800803362"
+//let iid = "14486549076"
 
 let isIphoneX: Bool = ScreenHeight == 812 ? true : false
 
